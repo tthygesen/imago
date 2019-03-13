@@ -2,10 +2,10 @@ Imago is small private image gallery for learning CRUD functionalities with fire
 The application can almost CRUD but it can not update images since firebase has not made specific API for that.
 
 ## STACK 
-React
-Redux
-Thunk
-Firebase
+React,
+Redux,
+Thunk,
+Firebase,
 Firstore
   
 ## Testing
