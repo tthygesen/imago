@@ -1,0 +1,59 @@
+.main-header {
+  padding: 15px;
+  background: #212121;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .nav-item {
+    width: 50%;
+  }
+  .nav-logo {
+    font-family: "Righteous", cursive;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    a {
+      text-decoration: none;
+      color: #1de9b6;
+    }
+  }
+  .navigation {
+    text-align: right;
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      list-style: none;
+      font-size: 20px;
+    }
+  }
+  .nav-link {
+    margin-right: 25px;
+    &:nth-last-child(1) {
+      margin-right: 0px;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+      transition: 0.1s ease-in-out all;
+      &:hover {
+        color: #1de9b6;
+      }
+    }
+    &.initials {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-transform: uppercase;
+      background: #304ffe;
+      padding: 15px;
+      border-radius: 100%;
+      cursor: pointer;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,29 @@
+.options-wrapper {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 0px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  button {
+    padding: 10px;
+    border-radius: 50px;
+    width: 75px;
+    height: 75px;
+    border: none;
+    /* background: #2979ff; */
+    background: #1de9b6;
+    font-size: 25px;
+    color: white;
+    transition: 0.3s ease-in-out all;
+    a {
+      color: white;
+    }
+  }
+  button.cancel {
+    background-color: #ff1744;
+    transform: rotate(45deg);
+  }
+}

@@ -1,0 +1,72 @@
+.profile-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 84px);
+  background-color: #212121;
+  color: #1de9b6;
+  h1 {
+    text-transform: uppercase;
+  }
+}
+
+.form-wrapper {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #212121;
+  &.active {
+    display: block;
+  }
+}
+
+form {
+  width: 300px;
+  padding: 25px 25px;
+  background: #212121;
+  margin: 100px auto 0 auto;
+  color: white;
+  border-radius: 5px;
+  h2 {
+    text-align: center;
+    color: #1de9b6;
+    margin-bottom: 15px;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    &:nth-last-child(1) {
+      margin-bottom: 0px;
+    }
+    input {
+      padding: 5px;
+      border: 1px solid black;
+    }
+  }
+  .error {
+    color: #ff1744;
+  }
+}
+button {
+  width: 100%;
+  border: none;
+  padding: 10px 5px;
+  background: #1de9b6;
+  color: #212121;
+  font-weight: 900;
+  font-size: 18px;
+  border-radius: 50px;
+  transition: 0.2s ease-in-out all;
+  &.delete {
+    background: #ff1744;
+  }
+  &:hover {
+    color: white;
+  }
+}

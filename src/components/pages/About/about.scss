@@ -1,0 +1,20 @@
+.about-page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 60px);
+  background: #212121;
+  h1 {
+    font-family: "Righteous", cursive;
+    text-transform: uppercase;
+    color: #1de9b6;
+  }
+  p {
+    color: white;
+    width: 300px;
+    text-align: justify;
+    line-height: 1.5;
+    margin-top: 25px;
+  }
+}
