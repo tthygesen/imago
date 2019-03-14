@@ -12,8 +12,9 @@ export const getImages = id => {
     const document = await documentRef.get().catch(err => {
       dispatch({ type: "GETDATA_ERROR", payload: err });
     });
-    if (document.exists) {
-      const data = document.data();
+    const data = document.data();
+
+    if (data) {
       const imagesArray = data.urls;
       dispatch({ type: "GET_IMAGES", payload: imagesArray });
     }
@@ -38,7 +39,7 @@ export const uploadImage = (id, image) => {
     //I called my folder in storage the same as the users' id
     //In put() you want to to put the image file / image object
     const uploadTask = await storageRef.put(image).catch(err => {
-      console.log(err);
+      //console.log(err);
     });
 
     //get the url for picutre
@@ -95,7 +96,7 @@ export const deleteImage = (item, index) => {
 
     //Delete image from the STORAGE
     imageRef.delete().catch(err => {
-      console.log(err);
+      //console.log(err);
       dispatch({ type: "DELETE_ERROR", payload: err });
     });
 

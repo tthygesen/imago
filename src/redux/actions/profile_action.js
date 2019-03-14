@@ -45,11 +45,16 @@ export const deleteAccount = password => {
         });
 
         //User account
-        await user.delete().catch(err => {
-          dispatch({ type: "DELETE_ERROR", payload: err });
-        });
-
-        dispatch({ type: "DELETE_SUCCESS" });
+        user
+          .delete()
+          .then(() => {
+            dispatch({ type: "IMAGES_RESET" });
+            dispatch({ type: "SUCCESS_RESET" });
+            dispatch({ type: "DELETE_SUCCESS" });
+          })
+          .catch(err => {
+            dispatch({ type: "DELETE_ERROR", payload: err });
+          });
       })
       .catch(err => {
         return dispatch({ type: "DELETE_ERROR", payload: err });

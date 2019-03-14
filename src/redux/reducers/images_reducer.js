@@ -22,7 +22,7 @@ const images_reducer = (state = initState, action) => {
         ...state,
         images: action.payload
       };
-    case "LOGOUT_SUCCESS":
+    case "IMAGES_RESET":
       return {
         ...state,
         images: []
